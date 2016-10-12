@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ejb-jar version="2.1" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/ejb-jar_2_1.xsd">
+    <enterprise-beans>
+        <session>
+            <display-name>UnderwritingRemoteSB</display-name>
+            <ejb-name>UnderwritingRemoteBean</ejb-name>
+            <home>com.apress.einsure.business.ejbfacade.UnderwritingRemoteHome</home>
+            <remote>com.apress.einsure.business.ejbfacade.UnderwritingRemote</remote>
+            <ejb-class>com.apress.einsure.business.ejbfacade.UnderwritingRemoteBean</ejb-class>
+            <session-type>Stateless</session-type>
+            <transaction-type>Container</transaction-type>
+            
+            <env-entry>
+                <env-entry-name>ejb/BeanFactoryPath</env-entry-name>
+                <env-entry-type>java.lang.String</env-entry-type>
+                <env-entry-value>com/apress/einsure/business/ejbfacade/Underwriting-beans.xml</env-entry-value>
+            </env-entry>
+           
+        </session>
+    </enterprise-beans>
+    <assembly-descriptor>
+        <container-transaction>
+            <method>
+                <ejb-name>UnderwritingRemoteBean</ejb-name>
+                <method-name>*</method-name>
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+    </assembly-descriptor>
+</ejb-jar>

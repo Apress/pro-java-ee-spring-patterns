@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+    <import resource="audit-config.xml" />
+    
+    <bean id="uwrAppService"
+          class="com.apress.einsure.business.impl.UnderwritingApplicationServiceImpl">
+    </bean>
+     <bean id="datasource" class="org.springframework.jndi.JndiObjectFactoryBean">
+        <property name="jndiName" value="einsureDatasource" />
+        <property name="jndiEnvironment">
+            <props>
+                <prop key="java.naming.factory.initial">
+                    org.jnp.interfaces.NamingContextFactory
+                </prop>
+                
+                <prop key="java.naming.provider.url">
+                    jnp://localhost:1099
+                </prop>
+                <prop key="java.naming.factory.url.pkgs">
+                    org.jboss.naming.client
+                </prop>
+                
+            </props>
+        </property>
+        
+    </bean>
+    
+    <bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="org.hsqldb.jdbcDriver"/>
+        <property name="url" value="jdbc:hsqldb:hsql://localhost:9001"/>
+        <property name="username" value="sa"/>
+        <property name="password" value=""/>
+    </bean>
+    
+    <bean id="mySessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+        <property name="dataSource" ref="myDataSource"/>
+        <property name="mappingResources">
+            <list>
+                <value>product.hbm.xml</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+            <value>
+                hibernate.dialect=org.hibernate.dialect.HSQLDialect
+            </value>
+        </property>
+    </bean>
+    
+    
+    
+</beans>

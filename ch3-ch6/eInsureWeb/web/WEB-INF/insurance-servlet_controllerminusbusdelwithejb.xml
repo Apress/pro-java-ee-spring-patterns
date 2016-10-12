@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+       http://www.springframework.org/schema/jee 
+       http://www.springframework.org/schema/jee/spring-jee-2.5.xsd"
+       default-lazy-init="true">
+    
+    
+    
+    
+    <bean id="viewResolver"
+          class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="viewClass"
+                  value="org.springframework.web.servlet.view.JstlView" />
+        <property name="prefix" value="/WEB-INF/jsp/" />
+        <property name="suffix" value=".jsp" />
+    </bean>
+    <!--
+    <bean name="underwritingBusinessDelegate"
+          class="com.apress.insurance.view.delegate.impl.UnderwritingBusinessDelegateImpl">
+        <property name="uwrRemoteHome" ref="uwrSlsbHome" />
+    </bean>
+    
+    <bean id="uwrSlsbHome"
+          class="org.springframework.jndi.JndiObjectFactoryBean">
+        <property name="jndiName" value="UnderwritingBeanRemote" />
+        <property name="jndiEnvironment">
+            <props>
+                <prop key="java.naming.factory.initial">
+                    org.jnp.interfaces.NamingContextFactory
+                </prop>
+                
+                <prop key="java.naming.provider.url">
+                    jnp://localhost:1099
+                </prop>
+                <prop key="java.naming.factory.url.pkgs">
+                    org.jboss.naming.client
+                </prop>
+                
+            </props>
+        </property>
+    </bean>
+    -->
+    
+    <bean id="uwrBusinessServiceProxy"
+          class="org.springframework.ejb.access.SimpleRemoteStatelessSessionProxyFactoryBean">
+        <property name="jndiName" value="UnderwritingBeanRemote" />
+        <property name="businessInterface" value="com.apress.einsure.business.api.UnderwritingBusinessService" />
+        <property name="jndiEnvironment">
+            <props>
+                <prop key="java.naming.factory.initial">
+                    org.jnp.interfaces.NamingContextFactory
+                </prop>
+                
+                <prop key="java.naming.provider.url">
+                    jnp://localhost:1099
+                </prop>
+                <prop key="java.naming.factory.url.pkgs">
+                    org.jboss.naming.client
+                </prop>
+                
+            </props>
+        </property>
+    </bean>
+    
+    
+    <bean name="/createPolicy.do"
+          class="com.apress.insurance.web.controller.SaveNewPolicyController" >
+        <property name="uwrBusinessService"
+                  ref="uwrBusinessServiceProxy" />
+        
+        <property name="formView"
+                  value="createPolicy" />	
+        
+        <property name="commandName"
+                  value="policydetails" />	
+        
+        <property name="successView"
+                  value="policydetails" />
+        
+        <property name="commandClass"
+                  value="com.apress.insuranceapp.web.formbean.PolicyFormBean" />	
+        
+    </bean>
+    
+</beans>

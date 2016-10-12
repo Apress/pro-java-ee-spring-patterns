@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+    
+    <bean id="uwrBusinessService"
+          class="com.apress.einsure.business.impl.UnderwritingBusinessServiceImpl">
+        <property name="policyDetailDao" ref="policyDetailDao"/>
+    
+    </bean>
+    
+    <bean id="policyDetailDao"
+          class="com.apress.einusre.persistence.dao.impl.PolicyDetailDaoImpl"
+    >      
+          <property name="dataSource" ref="datasource"/>
+    </bean>
+    
+    <bean id="datasource" class="org.springframework.jndi.JndiObjectFactoryBean">
+        <property name="jndiName" value="einsureDatasource" />
+        <property name="jndiEnvironment">
+            <props>
+                <prop key="java.naming.factory.initial">
+                    org.jnp.interfaces.NamingContextFactory
+                </prop>
+                
+                <prop key="java.naming.provider.url">
+                    jnp://localhost:1099
+                </prop>
+                <prop key="java.naming.factory.url.pkgs">
+                    org.jboss.naming.client
+                </prop>
+                
+            </props>
+        </property>
+        
+    </bean>
+    
+     <bean id="leadApplicationService"
+          class="com.apress.einsure.business.impl.LeadManagementApplicationServiceImpl">
+        <property name="savelLeadPao" ref="savelLeadPao"/>
+    
+    </bean>
+     <bean id="savelLeadPao"
+          class="com.apress.einusre.persistence.pao.SaveNewLeadPao">
+        <property name="dataSource" ref="datasource"/>
+    
+    </bean>
+    
+</beans>

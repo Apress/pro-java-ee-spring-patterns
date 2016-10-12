@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" skipped="0" tests="1" time="0.531" failures="0" name="com.apress.simpleapp.service.startup.test.SpringInitializerTest">
+  <properties>
+    <property value="Sun Microsystems Inc." name="java.vendor"/>
+    <property value="C:\Documents and Settings\dhrubo\.m2\repository" name="localRepository"/>
+    <property value="SUN_STANDARD" name="sun.java.launcher"/>
+    <property value="C:\Program Files\Lenovo" name="env.TVT"/>
+    <property value="HotSpot Client Compiler" name="sun.management.compiler"/>
+    <property value="$P$G" name="env.PROMPT"/>
+    <property value="Windows XP" name="os.name"/>
+    <property value="NO" name="env.FP_NO_HOST_CHECK"/>
+    <property value="C:\Program Files\Java\jdk1.5.0_12\jre\lib\rt.jar;C:\Program Files\Java\jdk1.5.0_12\jre\lib\i18n.jar;C:\Program Files\Java\jdk1.5.0_12\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.5.0_12\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.5.0_12\jre\lib\jce.jar;C:\Program Files\Java\jdk1.5.0_12\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.5.0_12\jre\classes" name="sun.boot.class.path"/>
+    <property value="KOLLXP-DKAYAL" name="env.COMPUTERNAME"/>
+    <property value="C:\Documents and Settings\All Users" name="env.ALLUSERSPROFILE"/>
+    <property value="windows" name="sun.desktop"/>
+    <property value="Sun Microsystems Inc." name="java.vm.specification.vendor"/>
+    <property value="C:\BTSpainWorkspaceBranch\config" name="env.config.external.dir"/>
+    <property value="1.5.0_12-b04" name="java.runtime.version"/>
+    <property value="\Documents and Settings\dkayal.INDIA" name="env.HOMEPATH"/>
+    <property value="EnableNXShowUI " name="env.__COMPAT_LAYER"/>
+    <property value="DKAYAL" name="user.name"/>
+    <property value="C:\SWSHARE" name="env.SWSHARE"/>
+    <property value="en" name="user.language"/>
+    <property value="C:\Program Files\Java\jdk1.5.0_12\jre\bin" name="sun.boot.library.path"/>
+    <property value="1.5.0_12" name="java.version"/>
+    <property value="x86 Family 6 Model 15 Stepping 6, GenuineIntel" name="env.PROCESSOR_IDENTIFIER"/>
+    <property value="Asia/Calcutta" name="user.timezone"/>
+    <property value="C:\DOCUME~1\DKAYAL~1.IND\LOCALS~1\Temp" name="env.TEMP"/>
+    <property value="32" name="sun.arch.data.model"/>
+    <property value="C:\Program Files\Java\jdk1.5.0_12\jre\lib\endorsed" name="java.endorsed.dirs"/>
+    <property value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86" name="sun.cpu.isalist"/>
+    <property value="C:" name="env.HOMEDRIVE"/>
+    <property value="Cp1252" name="sun.jnu.encoding"/>
+    <property value="sun.io" name="file.encoding.pkg"/>
+    <property value="C:\Program Files\Common Files\Lenovo\Python24" name="env.TVTPYDIR"/>
+    <property value="\" name="file.separator"/>
+    <property value="Java Platform API Specification" name="java.specification.name"/>
+    <property value="49.0" name="java.class.version"/>
+    <property value="C:\pmd-4.1" name="env.PMD_HOME"/>
+    <property value="US" name="user.country"/>
+    <property value="C:\Program Files\Java\jdk1.5.0_12\jre" name="java.home"/>
+    <property value="C:\Documents and Settings\dkayal.INDIA\Application Data" name="env.APPDATA"/>
+    <property value="mixed mode, sharing" name="java.vm.info"/>
+    <property value="C:\WINDOWS\system32\cmd.exe" name="env.ComSpec"/>
+    <property value="Windows_NT" name="env.OS"/>
+    <property value="C:\Program Files\Common Files" name="env.CommonProgramFiles"/>
+    <property value="5.1" name="os.version"/>
+    <property value=";" name="path.separator"/>
+    <property value="1.5.0_12-b04" name="java.vm.version"/>
+    <property value="C:\Program Files\Common Files\Lenovo" name="env.TVTCOMMON"/>
+    <property value="C:\Documents and Settings\dkayal.INDIA" name="env.USERPROFILE"/>
+    <property value="" name="user.variant"/>
+    <property value="C:\Program Files\Java\jdk1.5.0_12" name="env.JAVA_HOME"/>
+    <property value="sun.awt.windows.WPrinterJob" name="java.awt.printerjob"/>
+    <property value="C:\DOCUME~1\DKAYAL~1.IND\LOCALS~1\Temp" name="env.TMP"/>
+    <property value="UnicodeLittle" name="sun.io.unicode.encoding"/>
+    <property value="sun.awt.windows.WToolkit" name="awt.toolkit"/>
+    <property value="C:\Documents and Settings\dkayal.INDIA" name="user.home"/>
+    <property value="Console" name="env.SESSIONNAME"/>
+    <property value="Sun Microsystems Inc." name="java.specification.vendor"/>
+    <property value="C:\maven" name="env.M2_HOME"/>
+    <property value="2" name="env.NUMBER_OF_PROCESSORS"/>
+    <property value="C:\Program Files\Java\jdk1.5.0_12\bin;.;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jdk1.5.0_12/bin/../jre/bin/client;C:/Program Files/Java/jdk1.5.0_12/bin/../jre/bin;C:\oraclexe\app\oracle\product\10.2.0\server\bin;C:\Program Files\ThinkPad\Utilities;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\Intel\Wireless\Bin\;C:\Program Files\ThinkPad\ConnectUtilities;C:\Program Files\Common Files\Lenovo;C:\Program Files\Lenovo\Client Security Solution;C:\apache-ant-1.7.0\bin;C:\maven\bin;C:\Program Files\Windows Imaging\;C:\Program Files\Java\jdk1.5.0_12\bin;C:\oraclexe\app\oracle\product\10.2.0\server\bin;C:\Program Files\ThinkPad\Utilities;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\Intel\Wireless\Bin\;C:\Program Files\ThinkPad\ConnectUtilities;C:\Program Files\Common Files\Lenovo;C:\Program Files\Lenovo\Client Security Solution;C:\apache-ant-1.7.0\bin;C:\maven\bin;C:\Program Files\Windows Imaging\;C:\pmd-4.1\bin" name="java.library.path"/>
+    <property value="http://java.sun.com/" name="java.vendor.url"/>
+    <property value="CORP.CAPGEMINI.COM" name="env.USERDNSDOMAIN"/>
+    <property value="C:\Program Files\ThinkVantage\SMA\" name="env.SMA"/>
+    <property value="Sun Microsystems Inc." name="java.vm.vendor"/>
+    <property value="Java(TM) 2 Runtime Environment, Standard Edition" name="java.runtime.name"/>
+    <property value="/C:/eclipse/plugins/org.maven.ide.components.maven_embedder_2.1.0.20080530-2300/jars/aspectjrt-1.5.3.jar;/C:/eclipse/plugins/org.maven.ide.components.maven_embedder_2.1.0.20080530-2300/jars/commons-cli-1.0.jar;/C:/eclipse/plugins/org.maven.ide.components.maven_embedder_2.1.0.20080530-2300/jars/doxia-sink-api-1.0-alpha-9.jar;/C:/eclipse/plugins/org.maven.ide.components.maven_embedder_2.1.0.20080530-2300/jars/jsch-0.1.27.jar;/C:/eclipse/plugins/org.maven.ide.components.maven_embedder_2.1.0.20080530-2300/jars/jtidy-4aug2000r7-dev.jar;/C:/eclipse/plugins/org.maven.ide.components.maven_embedder_2.1.0.20080530-2300/jars/maven-artifact-3.0-SNAPSHOT.jar;/C:/eclipse/plugins/org.maven.ide.components.maven_embedder_2.1.0.20080530-2300/jars/maven-core-2.1-SNAPSHOT.jar;/C:/eclipse/plugins/org.maven.ide.components.maven_embedder_2.1.0.20080530-2300/jars/maven-embedder-2.1-SNAPSHOT.jar;/C:/eclipse/plugins/org.maven.ide.components.maven_embedder_2.1.0.20080530-2300/jars/maven-lifecycle-2.1-SNAPSHOT.jar;/C:/eclipse/plugins/org.maven.ide.components.maven_embedder_2.1.0.20080530-2300/jars/maven-model-2.1-SNAPSHOT.jar;/C:/eclipse/plugins/org.maven.ide.components.maven_embedder_2.1.0.20080530-2300/jars/maven-plugin-api-2.1-SNAPSHOT.jar;/C:/eclipse/plugins/org.maven.ide.components.maven_embedder_2.1.0.20080530-2300/jars/maven-profile-2.1-SNAPSHOT.jar;/C:/eclipse/plugins/org.maven.ide.components.maven_embedder_2.1.0.20080530-2300/jars/maven-project-2.1-SNAPSHOT.jar;/C:/eclipse/plugins/org.maven.ide.components.maven_embedder_2.1.0.20080530-2300/jars/maven-reporting-api-2.1-SNAPSHOT.jar;/C:/eclipse/plugins/org.maven.ide.components.maven_embedder_2.1.0.20080530-2300/jars/maven-toolchain-2.1-SNAPSHOT.jar;/C:/eclipse/plugins/org.maven.ide.components.maven_embedder_2.1.0.20080530-2300/jars/maven-workspace-2.1-SNAPSHOT.jar;/C:/eclipse/plugins/org.maven.ide.components.maven_embedder_2.1.0.20080530-2300/jars/plexus-classworlds-1.2-alpha-12.jar;/C:/eclipse/plugins/org.maven.ide.components.maven_embedder_2.1.0.20080530-2300/jars/plexus-container-default-1.0-alpha-44.jar;/C:/eclipse/plugins/org.maven.ide.components.maven_embedder_2.1.0.20080530-2300/jars/plexus-interactivity-api-1.0-alpha-6.jar;/C:/eclipse/plugins/org.maven.ide.components.maven_embedder_2.1.0.20080530-2300/jars/plexus-interpolation-1.0-SNAPSHOT.jar;/C:/eclipse/plugins/org.maven.ide.components.maven_embedder_2.1.0.20080530-2300/jars/plexus-utils-1.5.1.jar;/C:/eclipse/plugins/org.maven.ide.components.maven_embedder_2.1.0.20080530-2300/jars/wagon-file-1.0-beta-2.jar;/C:/eclipse/plugins/org.maven.ide.components.maven_embedder_2.1.0.20080530-2300/jars/wagon-http-lightweight-1.0-beta-2.jar;/C:/eclipse/plugins/org.maven.ide.components.maven_embedder_2.1.0.20080530-2300/jars/wagon-http-shared-1.0-beta-2.jar;/C:/eclipse/plugins/org.maven.ide.components.maven_embedder_2.1.0.20080530-2300/jars/wagon-provider-api-1.0-beta-2.jar;/C:/eclipse/plugins/org.maven.ide.components.maven_embedder_2.1.0.20080530-2300/jars/wagon-ssh-1.0-beta-2.jar;/C:/eclipse/plugins/org.maven.ide.components.maven_embedder_2.1.0.20080530-2300/jars/wagon-ssh-common-1.0-beta-2.jar;/C:/eclipse/plugins/org.maven.ide.components.maven_embedder_2.1.0.20080530-2300/jars/wagon-ssh-external-1.0-beta-2.jar" name="java.class.path"/>
+    <property value="Java Virtual Machine Specification" name="java.vm.specification.name"/>
+    <property value="\\WAD05" name="env.LOGONSERVER"/>
+    <property value="C:\WINDOWS" name="env.windir"/>
+    <property value="1.0" name="java.vm.specification.version"/>
+    <property value="x86" name="env.PROCESSOR_ARCHITECTURE"/>
+    <property value="Service Pack 2" name="sun.os.patch.level"/>
+    <property value="little" name="sun.cpu.endian"/>
+    <property value="C:\Program Files" name="env.ProgramFiles"/>
+    <property value="C:\apache-ant-1.7.0" name="env.ANT_HOME"/>
+    <property value="C:\OMSWorkspace\ch2\target\test-classes;C:\OMSWorkspace\ch2\target\classes;C:\Documents and Settings\dhrubo\.m2\repository\junit\junit\3.8.1\junit-3.8.1.jar;C:\Documents and Settings\dhrubo\.m2\repository\org\springframework\spring-core\2.5.4\spring-core-2.5.4.jar;C:\Documents and Settings\dhrubo\.m2\repository\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;C:\Documents and Settings\dhrubo\.m2\repository\org\springframework\spring\2.5.4\spring-2.5.4.jar;" name="surefire.test.class.path"/>
+    <property value="C:\DOCUME~1\DKAYAL~1.IND\LOCALS~1\Temp\" name="java.io.tmpdir"/>
+    <property value="0f06" name="env.PROCESSOR_REVISION"/>
+    <property value="C:\WINDOWS\system32\CCM\UATData\D9F8C395-CAB8-491d-B8AC-179A1FE1BE77" name="env.UATDATA"/>
+    <property value="http://java.sun.com/cgi-bin/bugreport.cgi" name="java.vendor.url.bug"/>
+    <property value="C:\WINDOWS" name="env.SystemRoot"/>
+    <property value="sun.awt.Win32GraphicsEnvironment" name="java.awt.graphicsenv"/>
+    <property value="x86" name="os.arch"/>
+    <property value="C:\Program Files\Java\jdk1.5.0_12\jre\lib\ext" name="java.ext.dirs"/>
+    <property value="C:\OMSWorkspace\ch2" name="user.dir"/>
+    <property value="
+" name="line.separator"/>
+    <property value="Java HotSpot(TM) Client VM" name="java.vm.name"/>
+    <property value=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH" name="env.PATHEXT"/>
+    <property value="C:/Program Files/Java/jdk1.5.0_12/bin/../jre/bin/client;C:/Program Files/Java/jdk1.5.0_12/bin/../jre/bin;C:\oraclexe\app\oracle\product\10.2.0\server\bin;C:\Program Files\ThinkPad\Utilities;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\Intel\Wireless\Bin\;C:\Program Files\ThinkPad\ConnectUtilities;C:\Program Files\Common Files\Lenovo;C:\Program Files\Lenovo\Client Security Solution;C:\apache-ant-1.7.0\bin;C:\maven\bin;C:\Program Files\Windows Imaging\;C:\Program Files\Java\jdk1.5.0_12\bin;C:\oraclexe\app\oracle\product\10.2.0\server\bin;C:\Program Files\ThinkPad\Utilities;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\Intel\Wireless\Bin\;C:\Program Files\ThinkPad\ConnectUtilities;C:\Program Files\Common Files\Lenovo;C:\Program Files\Lenovo\Client Security Solution;C:\apache-ant-1.7.0\bin;C:\maven\bin;C:\Program Files\Windows Imaging\;C:\pmd-4.1\bin" name="env.Path"/>
+    <property value="C:\OMSWorkspace\ch2" name="basedir"/>
+    <property value="true" name="maven.mode.standalone"/>
+    <property value="DKAYAL" name="env.USERNAME"/>
+    <property value="C:" name="env.SystemDrive"/>
+    <property value="Cp1252" name="file.encoding"/>
+    <property value="C:\Program Files\Lenovo\Rescue and Recovery" name="env.RR"/>
+    <property value="CORP" name="env.USERDOMAIN"/>
+    <property value="1.5" name="java.specification.version"/>
+    <property value="6" name="env.PROCESSOR_LEVEL"/>
+  </properties>
+  <testcase classname="com.apress.simpleapp.service.startup.test.SpringInitializerTest" time="0.516" name="testStartupSpringContext"/>
+</testsuite>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	<bean name="/createPolicy.do" class="com.apress.insurance.web.controller.CreatePolicyController" />
+	<bean name="/updatePolicy.do" class=" com.apress.insurance.web.controller.UpdatePolicyController" />
+	<bean name="/policydetails.do"
+		class="com.apress.insurance.web.controller.PolicyDetailsController" />
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.ResourceBundleViewResolver">
+		<property name="basename" value="insurance-views"></property>
+	</bean>
+</beans>

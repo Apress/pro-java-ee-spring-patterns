@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://www.netbeans.org/ns/project/1">
+    <type>org.netbeans.modules.j2ee.ejbjarproject</type>
+    <configuration>
+        <data xmlns="http://www.netbeans.org/ns/j2ee-ejbjarproject/3">
+            <name>RemoteEJBExample</name>
+            <minimum-ant-version>1.6</minimum-ant-version>
+            <included-library files="25">libs.spring-framework-2.5.classpath</included-library>
+            <included-library files="1">file.reference.xwork-2.1.1.jar</included-library>
+            <included-library files="1">file.reference.ognl-2.6.11.jar</included-library>
+            <included-library files="1">reference.TransferObject.jar</included-library>
+            <included-library files="1">reference.ApplicationService.jar</included-library>
+            <included-library files="1">file.reference.commons-lang.jar</included-library>
+            <source-roots>
+                <root id="src.dir"/>
+            </source-roots>
+            <test-roots>
+                <root id="test.src.dir"/>
+            </test-roots>
+        </data>
+        <references xmlns="http://www.netbeans.org/ns/ant-project-references/1">
+            <reference>
+                <foreign-project>ApplicationService</foreign-project>
+                <artifact-type>jar</artifact-type>
+                <script>build.xml</script>
+                <target>jar</target>
+                <clean-target>clean</clean-target>
+                <id>jar</id>
+            </reference>
+            <reference>
+                <foreign-project>TransferObject</foreign-project>
+                <artifact-type>jar</artifact-type>
+                <script>build.xml</script>
+                <target>jar</target>
+                <clean-target>clean</clean-target>
+                <id>jar</id>
+            </reference>
+        </references>
+    </configuration>
+</project>

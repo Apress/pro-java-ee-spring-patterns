@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	<bean name="carDao" class="com.apress.simpleapp.dao.CatDaoImpl" />
+	
+	<bean name="carService" class="com.apress.simpleapp.service.CatServiceImpl">
+		<property name="carDao" ref="carDao" />
+	</bean>
+	<!-- 
+		<bean name="carService" class="com.apress.simpleapp.service.CarServiceImpl">
+		<constructor-arg>
+			<ref bean="carDao" />
+		</constructor-arg>
+		</bean>
+		 -->
+</beans>

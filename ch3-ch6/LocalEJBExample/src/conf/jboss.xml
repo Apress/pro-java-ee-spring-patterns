@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss>
+    <enterprise-beans>
+   
+        <session>
+            <ejb-name>UnderwritingBean</ejb-name>
+            <jndi-name>UnderwritingBean</jndi-name>
+            <local-jndi-name>UnderwritingBeanLocal</local-jndi-name>
+      
+        </session>
+        
+        
+    </enterprise-beans>
+    
+    <resource-managers>
+    </resource-managers>
+    
+</jboss>

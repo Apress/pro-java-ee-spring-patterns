@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+       http://www.springframework.org/schema/jee 
+       http://www.springframework.org/schema/jee/spring-jee-2.5.xsd"
+       default-lazy-init="true">
+    
+    
+   
+    <bean name="policyQuoteDelegate" lazy-init="true"
+          class="com.xpress.channel.PolicyQuoteBusinessDelegate" >
+               <property name="businessService"
+                  ref="policyQuoteWebService" />
+    </bean>
+    
+    <bean id="policyQuoteWebService" class="org.springframework.remoting.jaxrpc.JaxRpcPortProxyFactoryBean" lazy-init="true">
+        <property name="serviceInterface" value="com.apress.einsure.business.api.PolicyQuoteBusinessService"/>
+        <property name="wsdlDocumentUrl" value="http://localhost:7001/eInsureWeb/axis/PolicyQuoteService?wsdl"/>
+        <property name="namespaceUri" value="http://localhost:7001/eInsureWeb/axis/PolicyQuoteService"/>
+        <property name="serviceName" value="PolicyQuoteService"/>
+        <property name="portName" value="PolicyQuoteService"/>
+        <property name="serviceFactoryClass" value="org.apache.axis.client.ServiceFactory" />
+    </bean>
+    
+</beans>

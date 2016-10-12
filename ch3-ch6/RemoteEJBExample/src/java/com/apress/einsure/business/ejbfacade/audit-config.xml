@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+    
+    <!--advice -->
+    <bean id="auditAdvice"
+          class="com.apress.einsure.security.audit.AuditAdviseInterceptor">
+        <property name="rules" >
+            <bean class="com.apress.einsure.security.audit.AuditRules" >
+                <property name="ruleMap" >
+                    <map>
+                        <entry>
+                            <key><value>underwriteNewPolicy</value></key>
+                            <bean class="com.apress.einsure.security.audit.AuditRule" >
+                                <property name="ruleDefinition" value="com.apress.einsure.business.impl.UnderwritingApplicationService.underwriteNewPolicy" />
+                                <property name="applyRule" value="true"></property>
+                            </bean>    
+                        </entry>
+                    </map> 
+                </property>
+            </bean>
+        </property>
+    </bean>
+    
+    <!--advisor -->
+    <bean id="auditAdvisor"
+          class="org.springframework.aop.aspectj.AspectJExpressionPointcutAdvisor">
+        <property name="advice" ref="auditAdvice" />
+        <property name="expression" value="execution(* *.underwrite*(..))" />
+    </bean>
+    
+    
+    <bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator" />
+    
+</beans>

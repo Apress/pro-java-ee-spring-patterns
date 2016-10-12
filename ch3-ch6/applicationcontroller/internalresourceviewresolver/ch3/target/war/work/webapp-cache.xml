@@ -1,0 +1,34 @@
+<webapp-structure>
+  <registeredFiles>
+    <entry>
+      <string>currentBuild</string>
+      <path-set>
+        <pathsSet class="linked-hash-set">
+          <string>index.jsp</string>
+          <string>META-INF/MANIFEST.MF</string>
+          <string>Policy.jsp</string>
+          <string>saved.jsp</string>
+          <string>WEB-INF/classes/insurance-views_fr_CA.properties</string>
+          <string>WEB-INF/insurance-servlet.xml</string>
+          <string>WEB-INF/jsp/PolicyDetails.jsp</string>
+          <string>WEB-INF/jsp/PolicyDetails_fr_CA.jsp</string>
+          <string>WEB-INF/views.xml</string>
+          <string>WEB-INF/web.xml</string>
+          <string>WEB-INF/classes/com/apress/insurance/web/controller/CreatePolicyController.class</string>
+          <string>WEB-INF/classes/com/apress/insurance/web/controller/PolicyDetailsController.class</string>
+          <string>WEB-INF/classes/com/apress/insurance/web/controller/UpdatePolicyController.class</string>
+          <string>WEB-INF/lib/spring-core-2.5.4.jar</string>
+          <string>WEB-INF/lib/commons-logging-1.1.1.jar</string>
+          <string>WEB-INF/lib/spring-webmvc-2.5.4.jar</string>
+          <string>WEB-INF/lib/spring-beans-2.5.4.jar</string>
+          <string>WEB-INF/lib/spring-context-2.5.4.jar</string>
+          <string>WEB-INF/lib/aopalliance-1.0.jar</string>
+          <string>WEB-INF/lib/spring-context-support-2.5.4.jar</string>
+          <string>WEB-INF/lib/spring-web-2.5.4.jar</string>
+          <string>WEB-INF/lib/servlet-api-2.4-20040521.jar</string>
+          <string>WEB-INF/lib/jstl-1.1.2.jar</string>
+        </pathsSet>
+      </path-set>
+    </entry>
+  </registeredFiles>
+</webapp-structure>
